@@ -1,0 +1,103 @@
+﻿.lauchyearlist {
+    display: inline-flex;
+    margin-top: 10px;
+}
+.leftfilter h6 {
+    text-transform: capitalize;
+    color: #2b2b2b;
+    font-size: 14px;
+    border-bottom: 2px solid #888;
+    padding-bottom: 2px;
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.even p {
+    letter-spacing: 1px;
+    width: 55px;
+    color: #232323;
+    background-color: #c5df9a;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.odd p {
+    letter-spacing: 1px;
+    width: 55px;
+    color: #232323;
+    background-color: #c5df9a;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.productbox {
+    padding: 10px 10px 16px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    min-height: 320px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+    .productbox figure img {
+        margin: auto;
+        text-align: center;
+        display: block;
+        width: 60%;
+        min-height: 100%;
+        background-color: #e1e1e1e1;
+    }
+h5.productlisttxt {
+    font-size: 18px;
+    color: #3F51B5;
+    font-weight: bold;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+}
+.boxtxt {
+    padding: 0px 10px;
+}
+.sucessfullaunch p {
+    text-transform: capitalize;
+    color: #2b2b2b;
+    font-size: 14px;
+    border-bottom: 2px solid #888;
+    padding-bottom: 2px;
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.sucessfullanding p {
+    text-transform: capitalize;
+    color: #2b2b2b;
+    font-size: 14px;
+    border-bottom: 2px solid #888;
+    padding-bottom: 2px;
+    padding-top: 20px;
+    width: 140px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.sucessfullaunch label {
+    letter-spacing: 1px;
+    width: 55px;
+    color: #232323;
+    background-color: #c5df9a;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.sucessfullanding label {
+    letter-spacing: 1px;
+    width: 55px;
+    color: #232323;
+    background-color: #c5df9a;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+.whtbg {
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}

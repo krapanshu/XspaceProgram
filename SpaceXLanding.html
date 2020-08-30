@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SpaceX Launch Program</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/Responsive.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/stylesheet.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.js"></script>
+
+    <script src="Public/Module/AppCtrl.js"></script>
+    <script src="Public/Services/XspaceService.js"></script>
+    <script src="Public/JSController/XspaceCTRL.js"></script>
+
+    <style>
+        .Colorchange {
+            background-color:  #7cb900 !important;
+        }
+		@media (max-width: 480px) {
+    .fullwd {
+        flex: 100%;
+        max-width: 100%;
+       margin-bottom: 15px;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" ng-app="XspaceApp" ng-controller="XspaceCtrl">
+
+        <section class="productlistmain">
+            <div class="container">
+                <!--Tad Heading Section-->
+                <div class="row">
+
+                    <div class="mainheading">
+                        <h1>SpaceX Launch Programs</h1>
+                    </div>
+                </div>
+            </div>
+            <!--Tab Heading Section Close-->
+            <div class="container">
+                <div class="row">
+                    <!--Add cart Section Right-->
+                    <div class="col-lg-2 col-sm-4 fullwd no-padding">
+					  <div class="whtbg">
+                        <div class="leftfilter">
+                            <label>Filters</label>
+                            <h6>Launch Year</h6>
+
+                            <div class="lauchyearlist">
+                                <div class="even">
+                                    <p data-ng-repeat="ev in Even" data-ng-class="evencls{{ev.Evenyear}}" data-ng-click="Evenyr(ev.Evenyear)">{{ev.Evenyear}}</p>
+                                </div>
+                                <div class="odd">
+                                    <p data-ng-repeat="ov in Odd" data-ng-class="evencls{{ov.Oddyear}}" data-ng-click="Oddyr(ov.Oddyear)">{{ov.Oddyear}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lauchyearlist">
+                            <div class="sucessfullaunch">
+                                <p data-ng-click="AllDataWithFilter()">successful launch</p>
+                                <label data-ng-class="launchclstrue" data-ng-click="SuccessLaunch(1)">True</label>
+                                <label data-ng-class="launchclsfalse" data-ng-click="SuccessLaunch(0)">False</label>
+                            </div>
+
+                        </div>
+                        <div class="sucessfullanding">
+                            <p>successful Landing</p>
+                            <label data-ng-class="landclstrue" data-ng-click="SuccessLand(1)">True</label>
+                            <label data-ng-class="landclsfalse" data-ng-click="SuccessLand(0)">False</label>
+                        </div>
+                        <!--Add cart Section Right Close-->
+                    </div>
+ </div>
+                    <!--Product List-->
+                    <div class="col-lg-10 col-sm-8 fullwd" data-ng-if="AllDataSpaceX !=0">
+                        <div class="rightbox">
+                            <div class="row no-padding">
+                                <ul class="producthomebox">
+                                    <li class="col-md-6 col-lg-3 col-xs-12 col-sm-6" data-ng-repeat="Mldt in AllSpaceX">
+                                        <!--Box One-->
+                                        <div class="bx-producthome">
+                                            <div class="productbox">
+                                                <a>
+                                                    <figure>
+                                                        <img data-ng-src="{{Mldt.mission_patch}}" class="img-responsive" />
+
+                                                    </figure>
+                                                </a>
+                                                <div class="boxtxt">
+                                                    <div class="topproductrattext">
+                                                        <div class="pull-left">
+                                                            <h5 class="productlisttxt">{{Mldt.mission_name}}</h5>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="">
+                                                        <b>Mission Ids :</b> {{Mldt.mission_id}}
+
+                                                    </div>
+                                                    <div class="">
+                                                        <b>Launch_year :</b> {{Mldt.Launchyear}}
+                                                    </div>
+                                                    <div class="">
+                                                        <b>Successful Launch :</b> {{Mldt.SuccesLaunch}}
+                                                    </div>
+                                                    <div class="">
+                                                        <b>Successful Landing :</b> {{Mldt.SuccesLand}}
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                                <!--Box One-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 col-md-12 col-sm-12" data-ng-if="AllDataSpaceX == 0">
+                        <div class="rightbox">
+                            <h3>No data available </h3>
+                        </div>
+                    </div>
+                    <!--Product List-->
+                </div>
+            </div>
+        </section>
+        <span style="text-align:center"><h3>Developed By : {{DeveloperName}}</h3></span>
+    </form>
+
+</body>
+</html>
